@@ -283,84 +283,42 @@
 
         /* --- רספונסיביות למובייל --- */
 /* --- רספונסיביות למובייל משופרת --- */
+/* --- תיקוני רספונסיביות סופיים --- */
+
+/* חוק ברזל: מונע מכל תמונה באתר לחרוג מהרוחב של המסך שלה */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
 @media (max-width: 768px) {
-    
-    /* 1. הדר - לוגו קטן יותר ומרכוז קל */
-    .nav-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .logo img {
-        width: 180px; /* הקטנת הלוגו */
-        height: auto;
-    }
-
-    .nav-links {
-        display: flex; /* מחזיר את הקישורים שנעלמו */
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        font-size: 0.9rem;
-    }
-
-    /* 2. הירו - טקסט מעל תמונה, יישור לימין */
-    .hero {
-        flex-direction: column; 
-        text-align: right;
-        padding: 40px 0;
-        gap: 30px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-        max-width: 100%;
-    }
-
-    .hero-image img, .placeholder-img {
-        width: 100%;
-        max-width: 300px; /* הגבלת גודל התמונה במובייל */
-        height: auto;
-        margin: 0 auto;
-    }
-
-    /* 3. גריד הכרטיסים - כרטיס אחד בשורה */
-    .cards-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .card img {
-        max-width: 150px; /* הקטנת האיורים בתוך הכרטיסים */
-        margin-bottom: 10px;
-    }
-
-    /* 4. מתנה (הדיסקים) */
+    /* תיקון חריגה של הקופסה הלבנה (הדיסקים) */
     .tracker-preview {
-        padding: 20px;
-        width: 95%;
+        max-width: 95% !important;
+        width: 95% !important;
+        margin: 20px auto !important;
+        padding: 15px !important;
+        box-sizing: border-box !important;
+        display: block !important;
     }
 
-    .tracker-preview img {
-        max-width: 100%; /* שהתמונה של הדיסקים לא תצא מהמסגרת */
+    /* תיקון התמונה בתוך אזור הדיסקים */
+    .circles-container img {
+        max-width: 100% !important;
+        height: auto !important;
     }
 
-    /* 5. אודות - תמונה ואז טקסט, יישור לימין */
-    .about-content {
+    /* תיקון התמונה הראשית (הירו) */
+    .placeholder-img {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 200px; /* שומר על נוכחות גם אם התמונה קטנה */
+        padding: 0 !important;
+    }
+
+    /* יישור טקסט לימין בתוך הקונטיינרים במובייל */
+    .hero, .about-content {
         flex-direction: column;
         text-align: right;
-    }
-
-    .about-image {
-        margin: 0 auto 20px auto; /* מרכוז התמונה העגולה */
-    }
-
-    /* 6. מרווחים כלליים */
-    .container {
-        padding: 0 20px;
     }
 }
