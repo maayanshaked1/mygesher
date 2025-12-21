@@ -283,42 +283,70 @@
 
         /* --- רספונסיביות למובייל --- */
 /* --- רספונסיביות למובייל משופרת --- */
-/* --- תיקוני רספונסיביות סופיים --- */
+/* --- פתרון סופי לבעיית הרוחב והחריגות --- */
 
-/* חוק ברזל: מונע מכל תמונה באתר לחרוג מהרוחב של המסך שלה */
-img {
-    max-width: 100% !important;
-    height: auto !important;
+/* 1. מונע מהדף כולו "לברוח" הצידה */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 768px) {
-    /* תיקון חריגה של הקופסה הלבנה (הדיסקים) */
-    .tracker-preview {
-        max-width: 95% !important;
-        width: 95% !important;
-        margin: 20px auto !important;
-        padding: 15px !important;
-        box-sizing: border-box !important;
-        display: block !important;
-    }
-
-    /* תיקון התמונה בתוך אזור הדיסקים */
-    .circles-container img {
-        max-width: 100% !important;
+    /* 2. טיפול בלוגו - הוא הגורם העיקרי לחריגה בהדר */
+    .logo img {
+        max-width: 180px !important; /* מקטין את הלוגו כדי שיפנה מקום */
         height: auto !important;
     }
 
-    /* תיקון התמונה הראשית (הירו) */
+    /* 3. טיפול ב-Container - מוודא שהוא לא רחב מהמסך */
+    .container {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 4. תיקון ה-Hero והתמונה הראשית */
+    .hero {
+        flex-direction: column !important;
+        text-align: right !important;
+        padding: 20px 0 !important;
+    }
+
     .placeholder-img {
         width: 100% !important;
         height: auto !important;
-        min-height: 200px; /* שומר על נוכחות גם אם התמונה קטנה */
-        padding: 0 !important;
+        min-height: 150px;
     }
 
-    /* יישור טקסט לימין בתוך הקונטיינרים במובייל */
-    .hero, .about-content {
-        flex-direction: column;
-        text-align: right;
+    /* 5. תיקון "דף שלושת הדיסקים" - כאן הייתה הבעיה העיקרית */
+    .tracker-preview {
+        display: block !important; /* מבטל את ה-inline-block שגרם לחריגה */
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px 0 !important;
+        padding: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .circles-container {
+        flex-wrap: wrap; /* מאפשר לדיסקים לרדת שורה אם אין מקום */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .circles-container img {
+        max-width: 100% !important;
+    }
+
+    /* 6. התאמת כפתורים שלא יחרגו */
+    .btn {
+        width: auto;
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 }
+
