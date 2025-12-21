@@ -282,86 +282,75 @@
         }
 
         /* --- רספונסיביות למובייל --- */
-     /* --- שיפורים גלובליים (כדאי להוסיף בתחילת הקובץ או מעל המדיה קווארי) --- */
-img {
-    max-width: 100%;
-    height: auto; /* מונע מתמונות לחרוג מרוחב המסך */
-}
-
-/* --- רספונסיביות למובייל (מסכים עד 768 פיקסלים) --- */
 @media (max-width: 768px) {
+    /* 1. טיפול בלוגו ובניווט - שלא יתפסו חצי מסך */
+    header {
+        padding: 10px 0; /* מצמצמים את גובה ההדר */
+    }
     
-    /* 1. כותרות - מקטינים מעט כדי שלא ישברו שורות בצורה מוזרה */
-    .hero h1 {
-        font-size: 2.2rem;
-        line-height: 1.1;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-
-    /* 2. הירו (Hero) - סידור מחדש */
-    .hero {
-        flex-direction: column-reverse; /* התמונה תהיה מעל הטקסט או מתחתיו לבחירתך */
-        text-align: center;
-        padding: 40px 0;
-        gap: 20px;
-    }
-
-    .hero p {
-        margin: 0 auto 25px;
-        font-size: 1.1rem;
-    }
-
-    .placeholder-img {
-        height: 250px; /* מקטינים את הגובה בנייד */
-    }
-
-    /* 3. ניווט - במקום להעלים אותו לגמרי, נציג אותו בצורה פשוטה */
     .nav-container {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: column; /* לוגו מעל הקישורים */
+        align-items: center;
+    }
+
+    .logo img {
+        width: 180px; /* מקטינים את הלוגו - 250px זה ענק לטלפון */
+        height: auto;
     }
 
     .nav-links {
-        display: flex; /* מחזירים את התצוגה */
-        flex-wrap: wrap; /* מאפשר לקישורים לרדת שורה אם אין מקום */
+        margin-top: 15px;
+        gap: 12px; /* מצמצמים רווח בין הקישורים */
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
-        font-size: 0.9rem;
     }
 
-    /* 4. גריד הכרטיסים - מוודאים שהם נפרסים יפה */
-    .cards-grid {
-        grid-template-columns: 1fr; /* כרטיס אחד בשורה */
-        padding: 0 10px;
+    .nav-links a {
+        font-size: 0.85rem; /* מקטינים מעט את הטקסט */
     }
 
-    /* 5. אודות (About) - סידור תמונה וטקסט */
+    /* 2. הירו (Hero) - טקסט קודם, תמונה אחר כך */
+    .hero {
+        flex-direction: column; /* הפעם בלי ה-reverse, שהטקסט יהיה למעלה */
+        text-align: right; /* שומרים על יישור לימין כמו במחשב */
+        padding: 30px 0;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* גודל קריא יותר לנייד */
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        max-width: 100%; /* שהטקסט יתפרס על כל הרוחב */
+    }
+
+    .placeholder-img {
+        width: 100%;
+        height: 200px; /* תמונה פחות דומיננטית כדי שלא תדחוף הכל למטה */
+    }
+
+    /* 3. אודות (About) - שלא ייראה צפוף */
     .about-content {
         flex-direction: column;
-        text-align: center;
-        gap: 30px;
+        text-align: right;
+        gap: 20px;
     }
 
     .about-image {
-        margin: 0 auto; /* מרכז את העיגול עם התמונה שלך */
+        margin: 0 auto; /* רק התמונה נשארת ממורכזת */
     }
 
-    /* 6. אזור המתנה (Tracker Preview) */
-    .tracker-preview {
-        padding: 20px;
-        width: 100%;
+    /* 4. ביטול מרווחים עודפים */
+    .container {
+        padding: 0 15px; /* רווח קטן מהצדדים של המסך */
     }
 
-    .circles-container {
-        gap: 10px;
-    }
-
-    /* 7. מרווחים כלליים - בנייד לא צריך 80px רווח */
     section {
-        padding: 50px 0 !important;
+        padding: 40px 0 !important;
     }
 }
+   
+   
