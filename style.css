@@ -282,14 +282,86 @@
         }
 
         /* --- רספונסיביות למובייל --- */
-        @media (max-width: 768px) {
-            .hero { flex-direction: column-reverse; text-align: center; padding: 40px 0; }
-            .hero p { margin: 0 auto 30px; }
-            .about-content { flex-direction: column; text-align: center; }
-            .nav-links { display: none; } /* במובייל נצטרך תפריט המבורגר בעתיד */
-        }
-        .rounded-image {
-         border-radius: 50%; /* עיגול של 50% */
-         object-fit: cover; /* שומר על יחס גובה-רוחב */
-         border: 3px solid #ffffff; /* מסגרת לבנה אופציונלית */
-        }
+     /* --- שיפורים גלובליים (כדאי להוסיף בתחילת הקובץ או מעל המדיה קווארי) --- */
+img {
+    max-width: 100%;
+    height: auto; /* מונע מתמונות לחרוג מרוחב המסך */
+}
+
+/* --- רספונסיביות למובייל (מסכים עד 768 פיקסלים) --- */
+@media (max-width: 768px) {
+    
+    /* 1. כותרות - מקטינים מעט כדי שלא ישברו שורות בצורה מוזרה */
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    /* 2. הירו (Hero) - סידור מחדש */
+    .hero {
+        flex-direction: column-reverse; /* התמונה תהיה מעל הטקסט או מתחתיו לבחירתך */
+        text-align: center;
+        padding: 40px 0;
+        gap: 20px;
+    }
+
+    .hero p {
+        margin: 0 auto 25px;
+        font-size: 1.1rem;
+    }
+
+    .placeholder-img {
+        height: 250px; /* מקטינים את הגובה בנייד */
+    }
+
+    /* 3. ניווט - במקום להעלים אותו לגמרי, נציג אותו בצורה פשוטה */
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: flex; /* מחזירים את התצוגה */
+        flex-wrap: wrap; /* מאפשר לקישורים לרדת שורה אם אין מקום */
+        justify-content: center;
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* 4. גריד הכרטיסים - מוודאים שהם נפרסים יפה */
+    .cards-grid {
+        grid-template-columns: 1fr; /* כרטיס אחד בשורה */
+        padding: 0 10px;
+    }
+
+    /* 5. אודות (About) - סידור תמונה וטקסט */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-image {
+        margin: 0 auto; /* מרכז את העיגול עם התמונה שלך */
+    }
+
+    /* 6. אזור המתנה (Tracker Preview) */
+    .tracker-preview {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .circles-container {
+        gap: 10px;
+    }
+
+    /* 7. מרווחים כלליים - בנייד לא צריך 80px רווח */
+    section {
+        padding: 50px 0 !important;
+    }
+}
