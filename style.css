@@ -83,11 +83,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height:50px;
 }
 
 .logo img {
-    width: 250px;
-    height: auto;
+    width: 150px;
+    height: 80px;
     display: block;
 }
 
@@ -268,3 +269,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
