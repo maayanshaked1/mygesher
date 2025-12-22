@@ -126,7 +126,9 @@ header {
     display: flex;
     justify-content: center;
 }
-
+.hero-base-image {
+    border: 5px solid #D08C77;
+}
 .placeholder-img {
     width: 100%;
     max-width: 450px;
@@ -269,6 +271,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
