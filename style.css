@@ -125,7 +125,6 @@ header {
     flex: 1;
     display: flex;
     justify-content: center;
-    border: 5px solid #D08C77;
 }
 .hero-base-image{
      border: 5px solid #D08C77;
@@ -273,6 +272,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
