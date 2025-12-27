@@ -80,7 +80,15 @@ header {
     width: 100%;          /* מבטיח שהוא יתפרס על כל רוחב המסך */
     z-index: 1000;        /* דואג שהתפריט יהיה תמיד מעל שאר התוכן */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* אופציונלי: הוספת צל עדין להפרדה ויזואלית */
+    /* הוספת מעבר חלק (אנימציה) */
+    transition: transform 0.3s ease-in-out; 
 }
+
+/* הקלאס הזה יתווסף דרך ה-JavaScript כשנגלול למטה */
+.header-hidden {
+    transform: translateY(-100%); /* דוחף את התפריט למעלה מחוץ למסך */
+}
+
 
 .nav-container {
     display: flex;
@@ -273,6 +281,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
