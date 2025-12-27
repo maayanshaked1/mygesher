@@ -27,6 +27,7 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     direction: rtl;
+    padding-top: 90px;
 }
 
 h1, h2, h3 {
@@ -281,6 +282,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
