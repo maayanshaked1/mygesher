@@ -7,139 +7,132 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <div class="container nav-container">
             <div class="logo">
-                <span><img src="גשר.PNG" alt="גשר בית לתקשורת ויזואלית מחברת"></span>
+                <img src="גשר.PNG" alt="גשר - תקשורת ויזואלית">
             </div>
             <nav class="nav-links">
+                <a href="#tools">כלים</a>
                 <a href="#about">מי אני?</a>
-                <a href="#tools">כלים להורדה</a>
-                <a href="#studio">סטודיו אישי</a>
-                <a href="#contact">בואי נדבר!</a>
+                <a href="#contact" class="nav-cta">בואי נדבר!</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero">
+    <main>
+        <section class="hero">
+            <div class="container hero-wrapper">
                 <div class="hero-text">
-                    <h1>תמונה אחת שווה<br> אלף מילים של <span>רוגע</span></h1>
+                    <span class="badge">תקשורת שיוצרת רוגע</span>
+                    <h1>תמונה אחת שווה<br>אלף מילים של <span>רוגע</span></h1>
                     <p>המקום שלך ליצור שפה משותפת עם הילד שלך, ברגעים שבהם המילים נגמרות והרגש מציף.</p>
-                    <a href="#tools" class="btn">אני רוצה להתחיל</a>
+                    <div class="hero-btns">
+                        <a href="#tools" class="btn btn-primary">אני רוצה להתחיל</a>
+                    </div>
                 </div>
                 <div class="hero-image">
-                    <div class="placeholder-img">
-                        <img src="ראשי4.PNG" alt=" (כאן נשים איור רך של אמא וילד יושבים יחד על שטיח ברוגע)">
+                    <img src="ראשי4.PNG" alt="איור של אמא וילד ברוגע">
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="worlds">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">איך אפשר לעזור לכם היום?</h2>
+                    <p>כלים פרקטיים ורעיונות שנוצרו מתוך ניסיון יומיומי בשטח</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-img-wrapper"><img src="ארגז הכלים המיידי.PNG" alt="ארגז כלים"></div>
+                        <h3>ארגז כלים מיידי</h3>
+                        <p>ערכות מוכנות: טבלאות התארגנות וסמלי תקשורת.</p>
+                        <div class="gift-box">
+                            <small>🎁 מתנה מחכה לך:</small>
+                            <a href="assets/songs-tracker.pdf" download>הורדת דף שלושת הדיסקים</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper"><img src="האקדמיה להורים.PNG" alt="אקדמיה"></div>
+                        <h3>האקדמיה להורים</h3>
+                        <p>הדרכות וידאו קצרות: איך להשתמש בכלים ויזואליים לחיבור והרגעה.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper"><img src="משחקים.PNG" alt="משחקים ופעילויות"></div>
+                        <h3>משחקים ופעילויות</h3>
+                        <p>רעיונות פשוטים לחיזוק הקשר והתקשורת בבית דרך משחק.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper"><img src="הסטודיו האישי.PNG" alt="סטודיו"></div>
+                        <div class="tag">בקרוב</div>
+                        <h3>הסטודיו האישי</h3>
+                        <p>מחולל AI שיוצר כרטיסיות עם הפנים של הילד שלכם.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="tools" class="worlds" style="scroll-margin-top: 120px;">
-        <div class="container">
-            <h2 class="section-title">איך אפשר לעזור לכם היום?</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <img src="ארגז הכלים המיידי.PNG">
-                    <span class="card-icon">🎁</span>
-                    <h3>ארגז כלים מיידי</h3>
-                    <p>ערכות מוכנות להורדה: טבלאות התארגנות, סמלי תקשורת ופתרונות למשברים.</p>
-                </div>
-                <div class="card">
-                    <img src="האקדמיה להורים.PNG">
-                    <span class="card-icon">💡</span>
-                    <h3>האקדמיה להורים</h3>
-                    <p>הדרכות וידאו קצרות: איך להשתמש בכלים ויזואליים כדי להרגיע ולחבר.</p>
-                </div>
-                <div class="card">
-                    <img src="הסטודיו האישי.PNG">
-                    <span class="card-icon">✨</span>
-                    <h3>הסטודיו האישי</h3>
-                    <p>בקרוב: מחולל AI שיוצר כרטיסיות עם הפנים של הילד שלכם.</p>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-image-side">
+                        <img src="תמונשלי.PNG" alt="מעיין שקד" class="profile-img-small">
+                    </div>
+                    <div class="about-text-content">
+                        <span class="sub-title">הסיפור מאחורי הגשר</span>
+                        <h2>נעים להכיר, אני מעיין ❤️</h2>
+                        <p>אמא של שרהלה, גבושלי ורוניקו. שלושה אוצרות מדהימים.</p>
+                        <p>ביום יום אני מתכנתת ואשת אוטומציה, רגילה לפרק מערכות מורכבות ולמצוא להן מענה. אבל כאמא לשלושה ילדים, שביניהם ילד מתוק על הרצף האוטיסטי, היו ימים שהרגשתי פשוט אבודה.</p>
+                        <p>אלו היו ימים שלמים של בכיות סביבי, מכל הכיוונים. הבית היה סוער, ואני הסתובבתי עם הרגשה נוראית וכבדה – שאני לא מצליחה לספק את הדבר הכי בסיסי: מקום שמח ורגוע לילדים שלי.</p>
+                        <blockquote class="simple-quote">
+                            "היה לי פחד קיומי בבטן. הסתכלתי על גבוש שלי, בתוך ההתקפים וחוסר השקט, ופחדתי שכל החיים הילד שלי יהיה עצוב."
+                        </blockquote>
+                        <p> ידעתי שהעולם התזזיתי אף פעם לא יהיה מותאם אליו וחיפשתי דרכים להרגיע. הוא היה בורח לשירים ולמוסיקה (ששנינו כל כך אוהבים), ואני פחדתי שהוא "יהיה שם" כל הזמן, מנותק, בלי דרך חזרה אלינו.</p>
+                        <p>ניסיתי לתקף, לחבק, להכיל, להסביר – אבל שום דבר לא מנע את ההתפרצות הבאה. הרגשתי שהמילים שלי, החמות והטובות, פשוט הולכות לאיבוד בחלל ולא מגיעות אליו.</p>
+                        <p>בתוך החיפוש שלי, נחשפתי לעולם של העזרים הוויזואליים. הבנתי שהוויזואל הוא כלי שיכול ליצור מרחב ביטחון והכנה לשינויים.</p>
+                        <p>ככה התחלתי לצייר לו</p>
+                        <p>מה שהתחיל כניסיון נואש להרגיע, הפך לכיף. הציורים בנו לנו גשר:) במקום פחד מהלא-נודע- הייתה ציפייה. במקום בכי- הייתה הבנה. ראיתי את העצב בעיניים שלו מתחלף ברוגע, ואותנו חוזרים לחייך. </p>
+                        <p>האתר "גשר" נולד מתוך המקום הזה. הוא לא נולד מתיאוריות, הוא נולד מאמא שהייתה מוכנה לעשות הכל כדי שהילד שלה יהיה רגוע, ובדרך מצאה גם שמחה.</p>
+                        <p>אני משתדלת לשים בו את מי שאני, את האהבה שלי לאמנות, לסיפורים ולצבעים ואם יהיה ילד אחד שיבכה פחות בזכותו או אמא שתרגיש שהיא לא לבד עם הרגשות הקשים- זה יהיה סיפוק אדיר בשבילי.</p>
+                        <p>באתר תוכלו למצוא סמלים מותאמים אישית, סיפורים חמודים וכלים פרקטיים לתכנון היום, שיעזרו לילד שלכם להרגיש בטוח, ולכם- להרגיש שיש את היכולת להאיר לו את הדרך.</p>
+                        <p>אני מזמינה אתכם לגלות איך כמה קווים וצבעים יכולים להפוך לשפה החדשה שלכם, ולבנות יחד את הדרך להבנה ולחיוך 🙏.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="product-highlight" style="scroll-margin-top: 120px;">
-        <div class="container">
-            <h2>🎁 מתנה ממני אלייך: לעצור את ה"לופ"</h2>
-            <p style="max-width: 600px; margin: 10px auto;">הילד רוצה שירים בלי הפסקה? הנה הכלי שעזר לי ולגבריאל לסיים בכיף וללא דמעות.</p>
-            
-            <div class="tracker-preview">
-                <h3>דף שלושת הדיסקים</h3>
-                <div class="circles-container">
-                    <img src="אחרוןודי.PNG" alt=""שיר אחרון ודי">
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h2>בואי נדבר</h2>
+                            <p>אני כאן לכל שאלה, התייעצות או שיתוף בסיפור שלכם.</p>
+                            <p>הודעה שלך יכולה להיות תחילתו של גשר חדש:)</p>
+                        </div>
+                        <form action="https://formspree.io/f/YOUR_ID" method="POST" class="contact-form">
+                            <input type="text" name="name" placeholder="איך קוראים לך?" required>
+                            <input type="email" name="email" placeholder="מה המייל שלך?" required>
+                            <textarea name="message" rows="4" placeholder="כאן אפשר לכתוב הכל..." required></textarea>
+                            <button type="submit" class="btn btn-primary btn-full">שליחת הודעה</button>
+                        </form>
+                    </div>
                 </div>
-                <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">*המחשה ויזואלית לקובץ ה-PDF*</p>
             </div>
-            <br>
-            <button class="btn">הורדה ישירה להדפסה</button>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="about" class="about" style="scroll-margin-top: 80px;" >
-    
-        <div class="container about-image">
-                <img src="תמונשלי.PNG" alt="(תמונה שלי מחייכת)" width="150px" height="150px" class="rounded-image">
-        </div>
-        <div class="container about-content">
-             <div dir= "rtl" text-align: center;>
-                  <p>נעים להכיר, אני מעיין❤️ אמא של שרהלה, גבושלי ורוניקו. שלושה אוצרות מדהימים.</p>
-                  <p>ביום יום אני מתכנתת, רגילה לפרק מערכות מורכבות ולמצוא להן מענה. אבל כאמא לשלושה ילדים, שביניהם ילד מתוק על הרצף האוטיסטי, היו ימים שהרגשתי פשוט אבודה. </p>
-                  <p> אלו היו ימים שלמים של בכיות סביבי, מכל הכיוונים. הבית היה סוער, ואני הסתובבתי עם הרגשה נוראית וכבדה – שאני לא מצליחה לספק את הדבר הכי בסיסי:</p>
-                  <p>מקום שמח ורגוע לילדים שלי.</p>
-                  <p>היה לי פחד קיומי בבטן. הסתכלתי על גבוש שלי, בתוך ההתקפים וחוסר השקט, ופחדתי שכל החיים הילד שלי יהיה עצוב.</p>
-                  <p> ידעתי שהעולם התזזיתי אף פעם לא יהיה מותאם אליו וחיפשתי דרכים להרגיע. הוא היה בורח לשירים ולמוסיקה (ששנינו כל כך אוהבים), ואני פחדתי שהוא "יהיה שם" כל הזמן, מנותק, בלי דרך חזרה אלינו.</p>
-                  <p>ניסיתי לתקף, לחבק, להכיל, להסביר – אבל שום דבר לא מנע את ההתפרצות הבאה. הרגשתי שהמילים שלי, החמות והטובות, פשוט הולכות לאיבוד בחלל ולא מגיעות אליו.</p>
-                  <p>בתוך החיפוש שלי, נחשפתי לעולם של העזרים הוויזואליים. הבנתי שהוויזואל הוא כלי שיכול ליצור מרחב ביטחון והכנה לשינויים.</p>
-                  <p>ככה התחלתי לצייר לו</p>
-                  <p>מה שהתחיל כניסיון נואש להרגיע, הפך לכיף. הציורים בנו לנו גשר:) במקום פחד מהלא-נודע- הייתה ציפייה. במקום בכי- הייתה הבנה. ראיתי את העצב בעיניים שלו מתחלף ברוגע, ואותנו חוזרים לחייך. </p>
-                  <p>האתר <strong>"גשר"</strong> נולד מתוך המקום הזה. הוא לא נולד מתיאוריות, הוא נולד מאמא שהייתה מוכנה לעשות הכל כדי שהילד שלה יהיה רגוע, ובדרך מצאה גם שמחה.</p>
-                   <p>אני משתדלת לשים בו את מי שאני, את האהבה שלי לאמנות, לסיפורים ולצבעים ואם יהיה ילד אחד שיבכה פחות בזכותו או אמא שתרגיש שהיא לא לבד עם הרגשות הקשים- זה יהיה סיפוק אדיר בשבילי.</p>
-                   <p>באתר תוכלו למצוא סמלים מותאמים אישית, סיפורים חמודים וכלים פרקטיים לתכנון היום, שיעזרו לילד שלכם להרגיש בטוח, ולכם- להרגיש שיש את היכולת להאיר לו את הדרך.</p>
-                  <p>אני מזמינה אתכם לגלות איך כמה קווים וצבעים יכולים להפוך לשפה החדשה שלכם, ולבנות יחד את הדרך להבנה ולחיוך 🙏.</p>
-                </div>
-        </div>
-    </section>
-</div>
-    
     <footer>
         <div class="container">
             <p>© 2025 גשר | נוצר באהבה על ידי מעיין שקד</p>
-            <p style="font-size: 0.8rem; margin-top: 10px;">בית לתקשורת ויזואלית מחברת</p>
         </div>
     </footer>
-   <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
-    
 </html>
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
