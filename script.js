@@ -1,86 +1,15 @@
-:root {
-    --bg-cream: #FAF9F6;
-    --bg-sand: #F2EDE4;
-    --sage-green: #8FA891;
-    --clay-accent: #D18E74;
-    --text-dark: #3A3A3A;
-    --white: #FFFFFF;
-    --transition: all 0.3s ease;
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const header = document.getElementById('main-header');
+    let lastScrollTop = 0;
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-    font-family: 'Assistant', sans-serif;
-    background-color: var(--bg-cream);
-    color: var(--text-dark);
-    line-height: 1.8;
-    direction: rtl;
-    overflow-x: hidden;
-}
-
-h1, h2, h3 { font-family: 'Rubik', sans-serif; font-weight: 700; }
-
-.container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
-
-/* --- Header --- */
-header {
-    background: rgba(255, 255, 255, 0.95);
-    position: fixed; top: 0; width: 100%; z-index: 1000;
-    padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease-in-out;
-}
-.header-hidden { transform: translateY(-100%); }
-
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo img { height: 50px; }
-.nav-links { display: flex; gap: 25px; align-items: center; }
-.nav-cta { color: var(--clay-accent) !important; font-weight: 700; }
-
-/* --- Hero --- */
-.hero { padding: 150px 0 80px; }
-.hero-wrapper { display: flex; align-items: center; gap: 50px; }
-.hero-text { flex: 1; }
-.hero h1 { font-size: 3rem; margin-bottom: 20px; }
-.hero h1 span { color: var(--sage-green); }
-.hero p { font-size: 1.2rem; color: #666; margin-bottom: 30px; }
-.hero-image img { max-width: 100%; border-radius: 30px; }
-.badge { background: var(--bg-sand); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 15px; display: inline-block; }
-
-/* --- Cards Section (4 Columns) --- */
-.worlds { padding: 80px 0; background: var(--white); }
-.section-header { text-align: center; margin-bottom: 50px; }
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-.card { background: var(--bg-cream); padding: 30px; border-radius: 25px; text-align: center; transition: var(--transition); position: relative; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-.card-img-wrapper { height: 100px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
-.card img { max-height: 100%; }
-.emoji-icon { font-size: 3rem; }
-.tag { position: absolute; top: 15px; left: 15px; background: var(--sage-green); color: white; padding: 3px 10px; border-radius: 10px; font-size: 0.7rem; }
-
-/* Gift Box inside card */
-.gift-box { margin-top: 15px; padding: 10px; background: var(--bg-sand); border-radius: 15px; }
-.gift-box a { color: var(--clay-accent); font-weight: 700; text-decoration: underline; font-size: 0.9rem; }
-
-/* --- About Section (Flexible) --- */
-.about { padding: 80px 0; background: var(--bg-sand); }
-.about-flex { display: flex; gap: 50px; align-items: flex-start; }
-.profile-img-small { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-.simple-quote { font-size: 1.3rem; font-style: italic; color: var(--sage-green); border-right: 4px solid var(--clay-accent); padding-right: 20px; margin: 25px 0; }
-
-/* --- Contact Section --- */
-.contact { padding: 80px 0; }
-.contact-card { background: var(--white); padding: 50px; border-radius: 35px; box-shadow: 0 20px 40px rgba(209, 142, 116, 0.1); text-align: center}
-
-.contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 12px; border: 1px solid #eee; font-family: inherit; }
-.btn { padding: 12px 30px; border-radius: 50px; border: none; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; transition: var(--transition); }
-.btn-primary { background: var(--clay-accent); color: white; }
-.btn-full { width: 100%; }
-
-
-/* Mobile */
-@media (max-width: 768px) {
-    .hero-wrapper, .about-flex, .contact-grid { flex-direction: column; text-align: center; }
-    .about-image-side { margin: 0 auto; }
-    .cards-grid { grid-template-columns: 1fr; }
-}
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 150) {
+            header.classList.add('header-hidden');
+        } else {
+            header.classList.remove('header-hidden');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, { passive: true });
+});
